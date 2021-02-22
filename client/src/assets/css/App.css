@@ -1,0 +1,50 @@
+@import "~antd/dist/antd.css";
+
+.logo {
+    float: left;
+    width: 50px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+}
+
+.site-layout .site-layout-background {
+    height: 100%;
+}
+
+.site-layout {
+    /*background-image: url("../images/main-background.jpg");*/
+    padding: 25px 50px;
+    margin-top: 64px;
+}
+
+.ant-menu-dark {
+    background: #1d1d1d !important;
+}
+
+.site-layout-background {
+    display: flex;
+
+    justify-content: center;
+    padding: 25px;
+    padding-bottom: 21%; /*TODO: el fondo del content no se ve completo*/
+}
+
+.footer {
+    background: #1d1d1d;
+    position: fixed;
+    color: #ffffffa6;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    position: "fixed";
+    z-index: 1;
+    width: "100%";
+}
+
+.main-card {
+  width: 800px;
+}
