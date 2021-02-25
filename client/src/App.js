@@ -14,16 +14,14 @@ function App() {
     return (
         <Router>
             <Layout>
-                <Header className="header" style={{ background: "#1d1d1d" }}>
+                <Header className="header" style={{ background: "#1d1d1d", position: 'fixed', zIndex: 1, width: '100%'}}>
                     <Link to="/"><img src={myLogo} className="logo"></img></Link>
                     <MenuComp/>
                 </Header>
                 <Content className="site-layout">
                         <Switch>
                             <Route exact path={["/", "/search"]} component={SearchComp}></Route>
-
                             <Route path="/write" component={WriteComp}></Route>
-
                             <Route path="/description" component={DescriptionComp}></Route>
                         </Switch>
                 </Content>

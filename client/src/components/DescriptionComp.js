@@ -13,11 +13,11 @@ export default class DescriptionComp extends Component {
         return (
             <div className="description">
                 <Row style={{ marginBottom: "50px" }}>
-                    <Col span={6}>
+                    <Col className="col-logo" span={6}>
                         <img className="description-logo" src={lockLogo}></img>
                     </Col>
 
-                    <Col span={16} style={{ textAlign: "justify", marginLeft: "20px", fontSize: "1.2em" }}>
+                    <Col className="description-text" span={16} style={{ textAlign: "justify", marginLeft: "20px", fontSize: "1.2em" }}>
                         <h1>Crypto msg</h1>
                         <p>
                             Crypto-msg es una aplicación con la que subir mensajes encriptados de manera anónima. Para leer el mensaje deberás compartir
@@ -28,10 +28,10 @@ export default class DescriptionComp extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col span={6}>
+                    <Col className="col-logo" span={6}>
                         <img id="keylogo" className="description-logo" src={keyLogo}></img>
                     </Col>
-                    <Col span={16} style={{ textAlign: "justify", marginLeft: "20px", fontSize: "1.2em" }}>
+                    <Col className="description-text" span={16} style={{ textAlign: "justify", marginLeft: "20px", fontSize: "1.2em" }}>
                         <h1>Tecnologías utilizadas</h1>
                         <p>
                             La aplicación está desarrollada en <a href={nodelink}>Nodejs</a> como backend y <a href={reactlink}>Reactjs</a> para frontend utilizando para el diseño

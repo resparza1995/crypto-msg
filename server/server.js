@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express    = require("express");
 const minimist   = require('minimist');
 const bodyParser = require("body-parser");

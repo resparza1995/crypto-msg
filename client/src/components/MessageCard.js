@@ -3,7 +3,7 @@ import { Input, Card, Row, Col } from 'antd';
 const { TextArea } = Input;
 
 
-export default class MessageComp extends Component {
+export default class MessageCard extends Component {
 
     handleSubmit = (values) => {
         console.log('Success:', values);
@@ -15,10 +15,10 @@ export default class MessageComp extends Component {
         let from = "From - " + "unknown";
 
         return (
-            <div className="card">
                 <Card
+                    id="message-card"
                     title={msgtitle}
-                    style={{ minWidth: "500px", minHeight: "500px", width: "600px" }}
+                    style={{ minWidth: "500px", minHeight: "500px", width: "600px", display:"none" }}
                 >
                     <Card type="inner" title={from} extra={<a href="#">Buscar otro</a>}>
                         <b>Subido en:</b>{Date.now()}
@@ -30,7 +30,6 @@ export default class MessageComp extends Component {
                         </p>
                     </Card>
                 </Card>
-            </div>
         );
 
     }
