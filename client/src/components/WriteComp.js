@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { React, Component } from 'react';
-import {Route } from 'react-router-dom';
 import { Form, Input, Button, Card } from 'antd';
+import * as Utils from '../lib/Utils';
+
 const { TextArea } = Input;
 
 
@@ -38,12 +39,12 @@ export default class WriteComp extends Component {
             };
             axios.post(`http://localhost:4000/api/message/send`, json, {headers: headers} )
             .then(res => {
-                alert("Guarda el código para poder acceder al mensaje\n"+res.data);
+                Utils.showInfoModal("Guarda el código", "Guarda el código para poder acceder al mensaje\n"+res.data);
                 this.props.history.push('/search');
             })
             .catch(err => {
                 console.log(err.stack);
-                alert("Ha habido un error con el servidor!");
+                Utils.showErrorModal("General Error", "Es posible que haya un error con el servidor");
             });
         }
 
